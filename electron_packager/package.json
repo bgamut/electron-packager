@@ -1,0 +1,33 @@
+{
+  "name": "squwbs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "public/electron.js",
+  "author": "Bernard Ahn",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^6.0.12",
+    "electron-builder": "^21.2.0",
+    "electron-is-dev": "^1.1.0",
+    "electron-packager": "^14.0.6"
+  },
+  "homepage": "./",
+  "build": {
+    "appId": "com.squwbs.suqwbs",
+    "productName": "${name}",
+    "copyright": "Copyright © 2019 ${author}",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "scripts": {
+    "electron-pack": "electron-packager . --productName=${name} --icon=./build/icons/favicon.icns --overwrite"
+  }
+}
